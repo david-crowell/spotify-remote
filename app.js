@@ -22,6 +22,7 @@ var mimeTypes = {
 };
 
 function handleRequest(req, res) {
+  console.log(req.url);
   var fileName = req.url === '/' ? 'index.html' : req.url.split('/').splice(-1)[0];
   var filePath = __dirname + '/public/' + fileName;
 
